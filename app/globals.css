@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Стили для слайдера категорий */
+.categories-swiper {
+  padding: 4px 0;
+}
+
+.categories-swiper .swiper-slide {
+  width: auto !important;
+}
+
+/* Скрываем скроллбар для WebKit браузеров */
+.categories-swiper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Скрываем скроллбар для Firefox */
+.categories-swiper {
+  scrollbar-width: none;
+} 
