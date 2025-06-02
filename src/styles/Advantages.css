@@ -1,0 +1,60 @@
+.advantages-swiper {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden !important;
+  padding-bottom: 3rem;
+}
+
+.swiper-wrapper {
+  padding: 20px 0;
+}
+
+/* Общие стили для всех слайдов */
+.swiper-slide {
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+/* Стили для активных слайдов */
+.swiper-slide-active,
+.swiper-slide-next,
+.swiper-slide-prev {
+  opacity: 1 !important;
+  z-index: 2;
+}
+
+.swiper-slide-advantages > div {
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.swiper-pagination {
+  position: relative;
+  bottom: 0 !important;
+  margin-top: 2rem;
+}
+
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background: #e5e7eb !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  width: 24px !important;
+  background: #ef4444 !important;
+  border-radius: 5px !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
+
+.swiper-slide-active .advantages-card {
+  transform: scale(1.05);
+} 
