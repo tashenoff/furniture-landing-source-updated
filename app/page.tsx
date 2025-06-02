@@ -1,21 +1,21 @@
 'use client';
 
-import React, { useState } from 'react'
-import Hero from '../components/Hero'
-import Advantages from '../components/Advantages'
-import About from '../components/About'
-import Services from '../components/Services'
-import Portfolio from '../components/Portfolio'
-import Reviews from '../components/Reviews'
-import Certificates from '../components/Certificates'
-import ContactForm from '../components/ContactForm'
-import Contacts from '../components/Contacts'
-import Footer from '../components/Footer'
+import React from 'react';
+import Hero from '@/components/Hero';
+import Advantages from '@/components/Advantages';
+import About from '@/components/About';
+import Portfolio from '@/components/Portfolio';
+import Process from '@/components/Process';
+import Certificates from '@/components/Certificates';
+import Contacts from '@/components/Contacts';
+import { useModal } from '@/context/ModalContext';
 
-export default function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+const Home: React.FC = () => {
+  const { openModal } = useModal();
 
-  const handleOpenModal = () => setIsModalOpen(true);
+  const handleOpenModal = () => {
+    openModal();
+  };
 
   return (
     <>
@@ -25,24 +25,13 @@ export default function Home() {
         <section id="about">
           <About />
         </section>
-        <section id="services">
-          <Services />
-        </section>
-        <section id="portfolio">
-          <Portfolio />
-        </section>
-        <section id="reviews">
-          <Reviews />
-        </section>
-        <section id="certificates">
-          <Certificates />
-        </section>
-        <section id="contacts">
-          <ContactForm />
-          <Contacts />
-        </section>
-        <Footer />
+        <Portfolio />
+        <Process />
+        <Certificates />
+        <Contacts />
       </main>
     </>
-  )
-} 
+  );
+};
+
+export default Home; 

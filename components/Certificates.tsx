@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCertificate, faShieldAlt, faSeedling, faRecycle, faIndustry, faCog } from '@fortawesome/free-solid-svg-icons';
+import { faCertificate, faShieldAlt, faSeedling, faRecycle, faCog } from '@fortawesome/free-solid-svg-icons';
 import { useInView } from 'react-intersection-observer';
 
 const Certificates: React.FC = () => {

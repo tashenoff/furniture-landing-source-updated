@@ -7,12 +7,25 @@ import { faMapMarkerAlt, faPhone, faEnvelope, faClock } from '@fortawesome/free-
 import { scrollToSection } from '../utils/scroll';
 import { useModal } from '@/context/ModalContext';
 
-const Hero: React.FC = () => {
-  const { openModal } = useModal();
-  const { ref, inView } = useInView({
+interface HeroProps {
+  onOpenModal?: () => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
+  const { ref } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  const { openModal } = useModal();
+
+  const handleOpenModal = () => {
+    if (onOpenModal) {
+      onOpenModal();
+    } else {
+      openModal();
+    }
+  };
 
   return (
     <section className="h-[600px] bg-black flex items-center justify-center p-4 mt-16 mb-5">
@@ -39,7 +52,7 @@ const Hero: React.FC = () => {
               </p>
               <div ref={ref} className="flex flex-col sm:flex-row gap-4 animate-slide-up" style={{ animationDelay: '0.9s' }}>
                 <button 
-                  onClick={openModal}
+                  onClick={handleOpenModal}
                   className="px-6 py-3 sm:px-8 sm:py-4 bg-red-700 text-white rounded-lg hover:bg-red-800 transition-colors duration-300 text-base sm:text-lg font-medium relative overflow-hidden group"
                 >
                   <span className="relative z-10">Оставить заявку</span>
