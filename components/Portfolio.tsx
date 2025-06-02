@@ -81,6 +81,17 @@ const Portfolio: React.FC = () => {
             style={{
               padding: '0 15% 0 0'
             }}
+            breakpoints={{
+              320: {
+                slidesPerView: 'auto',
+                centeredSlides: false,
+              },
+              768: {
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                initialSlide: 1,
+              }
+            }}
           >
             {categories.map((category, index) => (
               <SwiperSlide key={index} style={{ width: 'auto' }}>
