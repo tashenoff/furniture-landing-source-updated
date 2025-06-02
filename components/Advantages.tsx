@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserTie, faClock, faShieldAlt, faTools, faHandshake, faGem, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faUserTie, faClock, faShieldAlt, faTools, faHandshake } from '@fortawesome/free-solid-svg-icons';
 import { useInView } from 'react-intersection-observer';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';

@@ -43,7 +43,14 @@ const Contacts: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold mb-1 text-left">Телефон</h4>
-                    <p className="text-gray-600 text-left">+7 (495) 123-45-67</p>
+                    <div className="flex items-center space-x-4">
+                      <a
+                        href="tel:+77777777777"
+                        className="text-white hover:text-red-500 transition-colors"
+                      >
+                        <FontAwesomeIcon icon={faPhone} className="w-6 h-6" />
+                      </a>
+                    </div>
                   </div>
                 </div>
                 
@@ -53,7 +60,14 @@ const Contacts: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold mb-1 text-left">Email</h4>
-                    <p className="text-gray-600 text-left">info@mebel-company.ru</p>
+                    <div className="flex items-center space-x-4">
+                      <a
+                        href="mailto:info@example.com"
+                        className="text-white hover:text-red-500 transition-colors"
+                      >
+                        <FontAwesomeIcon icon={faEnvelope} className="w-6 h-6" />
+                      </a>
+                    </div>
                   </div>
                 </div>
                 

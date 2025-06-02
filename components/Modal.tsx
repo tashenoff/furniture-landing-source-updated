@@ -3,9 +3,8 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faUser, faPhone, faEnvelope, faMessage, faCheck } from '@fortawesome/free-solid-svg-icons';
-import Link from 'next/link';
-import { useModal } from '@/context/ModalContext';
 import { useRouter } from 'next/navigation';
+import { useModal } from '@/context/ModalContext';
 
 const Modal: React.FC = () => {
   const { isOpen, closeModal } = useModal();
