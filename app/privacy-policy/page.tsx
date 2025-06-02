@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
     <div className="min-h-screen flex flex-col bg-black">
       <main className="flex-grow container mx-auto px-4 py-24">
         <div className="max-w-4xl mx-auto bg-black/50 p-8 rounded-lg border border-red-900/20">
-          <h1 className="text-3xl font-bold text-white mb-8">Политика конфиденциальности</h1>
+          <h1 className="text-2xl font-bold text-white mb-8">Политика конфиденциальности</h1>
           
           <div className="space-y-6 text-gray-300">
             <p>

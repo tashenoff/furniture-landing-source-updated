@@ -2,8 +2,6 @@
 
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faPhone, faEnvelope, faClock } from '@fortawesome/free-solid-svg-icons';
 import { scrollToSection } from '../utils/scroll';
 import { useModal } from '@/context/ModalContext';
 
