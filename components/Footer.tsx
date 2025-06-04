@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
                 <span className="text-white mr-3 mt-1">
                   <FontAwesomeIcon icon={faEnvelope} />
                 </span>
-                <span className="text-gray-400">info@mebel-home.ru</span>
+                <span className="text-gray-400">miart-mebel@yandex.ru</span>
               </li>
               <li className="flex items-start">
                 <span className="text-white mr-3 mt-1">
