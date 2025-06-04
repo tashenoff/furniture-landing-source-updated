@@ -48,30 +48,33 @@ const About: React.FC = () => {
               и заслужили доверие наших клиентов благодаря нашим ключевым преимуществам:
             </p>
           </div>
-
-          <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            {advantages.map((item, index) => (
-              <div 
-                key={item.title}
-                className={`transform hover:-translate-y-2 transition-all duration-300 
-                  bg-white rounded-xl p-6 shadow-lg hover:shadow-xl h-full
-                  animate-on-scroll ${inView ? 'is-visible' : ''}`}
-                style={{ transitionDelay: `${index * 0.1}s` }}
+          
+          <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {advantages.map((advantage, index) => (
+              <div
+                key={index}
+                className={`bg-white rounded-xl shadow-lg p-6 transform transition-all duration-500 hover:shadow-xl hover:-translate-y-1 ${
+                  inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                }`}
+                style={{
+                  transitionDelay: `${index * 100}ms`
+                }}
               >
-                <div className="relative w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <div className="absolute inset-0 bg-red-700/10 rounded-xl transform rotate-45"></div>
-                  <div className="w-14 h-14 bg-red-700 rounded-xl flex items-center justify-center transform -rotate-45">
-                    <FontAwesomeIcon icon={item.icon} className="text-2xl text-white" />
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 flex items-center justify-center rounded-full bg-black mb-6 relative overflow-hidden group">
+                    <div className="absolute inset-0 bg-gradient-to-br from-red-600 to-red-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <FontAwesomeIcon icon={advantage.icon} className="text-2xl text-white relative z-10 transition-transform duration-500 group-hover:scale-110" />
                   </div>
+                  <h3 className="text-xl font-bold mb-4">{advantage.title}</h3>
+                  <p className="text-gray-600">{advantage.description}</p>
                 </div>
-                <h3 className="text-xl font-bold text-center mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-center text-sm leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Закомментированная секция "Наши партнеры"
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <h3 className="text-3xl font-bold text-center mb-12 text-white">
@@ -91,6 +94,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
+      */}
     </>
   );
 };

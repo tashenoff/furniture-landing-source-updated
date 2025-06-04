@@ -13,9 +13,9 @@ const Contacts: React.FC = () => {
   });
 
   return (
-    <section id="contacts" className="py-20 bg-white">
+    <section id="contacts" className="lg:py-20 py-10 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-left mb-16">Наши контакты</h2>
+        <h2 className="lg:text-4xl text-2xl font-bold text-left lg:mb-16 mb-8">Наши контакты</h2>
         
         <div className="flex flex-col lg:flex-row gap-8">
           <div ref={ref} className="w-full lg:w-1/2 bg-white rounded-lg shadow-lg p-8">
@@ -28,8 +28,8 @@ const Contacts: React.FC = () => {
             >
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-black text-white mr-4">
-                    <FontAwesomeIcon icon={faMapMarkerAlt} className="text-xl" />
+                  <div className="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white mr-4 relative">
+                    <FontAwesomeIcon icon={faMapMarkerAlt} className="w-4 h-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                   </div>
                   <div>
                     <h4 className="font-bold mb-1 text-left">Адрес</h4>
@@ -38,42 +38,42 @@ const Contacts: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-black text-white mr-4">
-                    <FontAwesomeIcon icon={faPhone} className="text-xl" />
+                  <div className="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white mr-4 relative">
+                    <FontAwesomeIcon icon={faPhone} className="w-4 h-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                   </div>
                   <div>
                     <h4 className="font-bold mb-1 text-left">Телефон</h4>
                     <div className="flex items-center space-x-4">
                       <a
-                        href="tel:+77777777777"
-                        className="text-white hover:text-red-500 transition-colors"
+                        href="tel:+74993256717"
+                        className="text-gray-600 hover:text-black transition-colors"
                       >
-                        <FontAwesomeIcon icon={faPhone} className="w-6 h-6" />
+                        +7 (499) 325-67-17
                       </a>
                     </div>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-black text-white mr-4">
-                    <FontAwesomeIcon icon={faEnvelope} className="text-xl" />
+                  <div className="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white mr-4 relative">
+                    <FontAwesomeIcon icon={faEnvelope} className="w-4 h-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                   </div>
                   <div>
                     <h4 className="font-bold mb-1 text-left">Email</h4>
                     <div className="flex items-center space-x-4">
                       <a
-                        href="mailto:info@example.com"
-                        className="text-white hover:text-red-500 transition-colors"
+                        href="mailto:miart-mebel@yandex.ru"
+                        className="text-gray-600 hover:text-black transition-colors"
                       >
-                        <FontAwesomeIcon icon={faEnvelope} className="w-6 h-6" />
+                        miart-mebel@yandex.ru
                       </a>
                     </div>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-black text-white mr-4">
-                    <FontAwesomeIcon icon={faClock} className="text-xl" />
+                  <div className="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white mr-4 relative">
+                    <FontAwesomeIcon icon={faClock} className="w-4 h-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                   </div>
                   <div>
                     <h4 className="font-bold mb-1 text-left">Время работы</h4>
@@ -82,26 +82,22 @@ const Contacts: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-black text-white mr-4">
-                    <FontAwesomeIcon icon={faWhatsapp} className="text-xl" />
+                  <div className="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white mr-4 relative">
+                    <FontAwesomeIcon icon={faWhatsapp} className="w-4 h-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                   </div>
                   <div>
                     <h4 className="font-bold mb-1 text-left">Мессенджеры</h4>
                     <div className="flex space-x-2">
                       <a href="#" className="text-gray-600 hover:text-black transition-colors">
-                        <FontAwesomeIcon icon={faWhatsapp} className="text-xl" />
+                        <FontAwesomeIcon icon={faWhatsapp} className="w-4 h-4" />
                       </a>
                       <a href="#" className="text-gray-600 hover:text-black transition-colors">
-                        <FontAwesomeIcon icon={faTelegram} className="text-xl" />
+                        <FontAwesomeIcon icon={faTelegram} className="w-4 h-4" />
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              
-              <button className="mt-8 bg-black text-white px-6 py-3 rounded hover:bg-gray-900 transition-colors">
-                Заказать звонок
-              </button>
             </div>
           </div>
           

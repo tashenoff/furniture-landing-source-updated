@@ -108,13 +108,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
 
           <div className="p-4 border-t border-white/10 space-y-3">
             <a 
-              href="tel:+79999999999" 
+              href="tel:+74993256717" 
               className="flex items-center text-white group"
             >
               <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-red-500 transition-colors mr-2">
                 <FontAwesomeIcon icon={faPhone} className="text-white text-sm" />
               </div>
-              <span className="text-sm">+7 (999) 999-99-99</span>
+              <span className="text-sm">+7 (499) 325-67-17</span>
             </a>
             
             <button

@@ -70,9 +70,9 @@ const Header: React.FC = () => {
                 <span className="text-white text-sm">Сейчас работаем</span>
               </div>
               
-              <a href="tel:+79999999999" className="flex items-center text-white hover:text-red-700 transition-colors">
+              <a href="tel:+74993256717" className="flex items-center text-white hover:text-red-700 transition-colors">
                 <FontAwesomeIcon icon={faPhone} className="mr-2" />
-                <span className="hidden md:inline">+7 (999) 999-99-99</span>
+                <span className="hidden md:inline">+7 (499) 325-67-17</span>
               </a>
               
               <button 

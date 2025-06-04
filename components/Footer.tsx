@@ -20,17 +20,17 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 mb-6">
               Индивидуальный подход, соблюдение сроков и безупречное качество для вашего идеального интерьера
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <FontAwesomeIcon icon={faWhatsapp} size="lg" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <FontAwesomeIcon icon={faTelegram} size="lg" />
               </a>
-            </div>
+            </div> */}
           </div>
           
-          <div className="text-left">
+          <div className="text-left hidden md:block">
             <h3 className="text-lg font-bold mb-6">Навигация</h3>
             <ul className="space-y-3">
               <li><a href="#about" className="text-gray-400 hover:text-white transition-colors block">О компании</a></li>
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
                 <span className="text-white mr-3 mt-1">
                   <FontAwesomeIcon icon={faPhone} />
                 </span>
-                <span className="text-gray-400">+7 (495) 123-45-67</span>
+                <span className="text-gray-400">+7 (499) 325-67-17</span>
               </li>
               <li className="flex items-start">
                 <span className="text-white mr-3 mt-1">

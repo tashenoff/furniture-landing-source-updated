@@ -216,7 +216,7 @@ const Modal: React.FC = () => {
             </div>
 
             <div className="flex items-center space-x-2">
-              <div className="relative">
+              <label className="relative flex items-center cursor-pointer">
                 <input 
                   type="checkbox" 
                   id="modal-privacy"
@@ -225,30 +225,32 @@ const Modal: React.FC = () => {
                   className="sr-only peer"
                   required
                 />
-                <div className="w-5 h-5 border-2 border-gray-600 rounded peer-checked:bg-white peer-checked:border-white transition-colors cursor-pointer">
+                <div className="w-5 h-5 border-2 border-gray-600 rounded transition-colors relative">
                   <FontAwesomeIcon 
                     icon={faCheck} 
-                    className="text-black text-xs absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 peer-checked:opacity-100 transition-opacity"
+                    className={`text-white text-sm absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-opacity ${
+                      isPrivacyAccepted ? 'opacity-100' : 'opacity-0'
+                    }`}
                   />
                 </div>
-              </div>
-              <label htmlFor="modal-privacy" className="text-sm text-gray-300 cursor-pointer">
-                Я согласен с{' '}
-                <button
-                  type="button"
-                  onClick={() => handleNavigate('/privacy-policy')}
-                  className="text-white hover:underline transition-colors"
-                >
-                  политикой конфиденциальности
-                </button>
-                {' '}и{' '}
-                <button
-                  type="button"
-                  onClick={() => handleNavigate('/terms')}
-                  className="text-white hover:underline transition-colors"
-                >
-                  пользовательским соглашением
-                </button>
+                <span className="text-sm text-gray-300 ml-2">
+                  Я согласен с{' '}
+                  <button
+                    type="button"
+                    onClick={() => handleNavigate('/privacy-policy')}
+                    className="text-white hover:underline transition-colors"
+                  >
+                    политикой конфиденциальности
+                  </button>
+                  {' '}и{' '}
+                  <button
+                    type="button"
+                    onClick={() => handleNavigate('/terms')}
+                    className="text-white hover:underline transition-colors"
+                  >
+                    пользовательским соглашением
+                  </button>
+                </span>
               </label>
             </div>
 

@@ -172,7 +172,7 @@ const ContactForm: React.FC = () => {
               </div>
               
               <div className="flex items-center space-x-2">
-                <div className="relative">
+                <label className="relative flex items-center cursor-pointer">
                   <input 
                     type="checkbox" 
                     id="privacy"
@@ -181,12 +181,17 @@ const ContactForm: React.FC = () => {
                     className="sr-only peer"
                     required
                   />
-                  <div className="w-5 h-5 border-2 border-gray-600 rounded peer-checked:bg-white peer-checked:border-white transition-colors cursor-pointer">
-                    <FontAwesomeIcon icon={faCheck} className="text-black text-xs absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 peer-checked:opacity-100 transition-opacity" />
+                  <div className="w-5 h-5 border-2 border-gray-600 rounded transition-colors relative">
+                    <FontAwesomeIcon 
+                      icon={faCheck} 
+                      className={`text-white text-sm absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-opacity ${
+                        isPrivacyAccepted ? 'opacity-100' : 'opacity-0'
+                      }`}
+                    />
                   </div>
-                </div>
-                <label htmlFor="privacy" className="text-sm text-gray-300 cursor-pointer">
-                  Я согласен с <Link href="/privacy-policy" className="text-white hover:underline">политикой конфиденциальности</Link> и <Link href="/terms" className="text-white hover:underline">пользовательским соглашением</Link>
+                  <span className="text-sm text-gray-300 ml-2">
+                    Я согласен с <Link href="/privacy-policy" className="text-white hover:underline">политикой конфиденциальности</Link> и <Link href="/terms" className="text-white hover:underline">пользовательским соглашением</Link>
+                  </span>
                 </label>
               </div>
               
