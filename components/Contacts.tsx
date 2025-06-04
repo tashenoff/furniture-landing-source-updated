@@ -15,7 +15,7 @@ const Contacts: React.FC = () => {
   return (
     <section id="contacts" className="lg:py-20 py-10 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="lg:text-4xl text-2xl font-bold text-left lg:mb-16 mb-8">Наши контакты</h2>
+        <h2 className="lg:text-4xl text-2xl font-bold text-left lg:mb-16 mb-8 text-center">Наши контакты</h2>
         
         <div className="flex flex-col lg:flex-row gap-8">
           <div ref={ref} className="w-full lg:w-1/2 bg-white rounded-lg shadow-lg p-8">
@@ -27,7 +27,7 @@ const Contacts: React.FC = () => {
               }}
             >
               <div className="space-y-6">
-                <div className="flex items-start">
+                {/* <div className="flex items-start">
                   <div className="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white mr-4 relative">
                     <FontAwesomeIcon icon={faMapMarkerAlt} className="w-4 h-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                   </div>
@@ -35,7 +35,7 @@ const Contacts: React.FC = () => {
                     <h4 className="font-bold mb-1 text-left">Адрес</h4>
                     <p className="text-gray-600 text-left">Москва, ул. Автозаводская, 23Ак2</p>
                   </div>
-                </div>
+                </div> */}
                 
                 <div className="flex items-start">
                   <div className="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white mr-4 relative">

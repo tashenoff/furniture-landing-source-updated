@@ -88,7 +88,7 @@ const ContactForm: React.FC = () => {
       <div className="absolute inset-0 bg-black opacity-95 z-[1]"></div>
       <div className="container mx-auto px-4 relative z-[2]">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-8">Связаться с нами</h2>
+          <h2 className="lg:text-4xl text-2xl font-bold text-white text-center mb-8">Связаться с нами</h2>
           <div ref={ref} className={`border border-white/20 rounded-xl p-8 backdrop-blur-sm bg-white/5 animate-on-scroll ${inView ? 'is-visible' : ''}`}>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
