@@ -1,7 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhone, faEnvelope, faClock } from '@fortawesome/free-solid-svg-icons';
-import { faWhatsapp, faTelegram } from '@fortawesome/free-brands-svg-icons';
 import Image from 'next/image';
 import Link from 'next/link';
 import './Footer.css';
@@ -20,14 +19,6 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 mb-6">
               Индивидуальный подход, соблюдение сроков и безупречное качество для вашего идеального интерьера
             </p>
-            {/* <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <FontAwesomeIcon icon={faWhatsapp} size="lg" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <FontAwesomeIcon icon={faTelegram} size="lg" />
-              </a>
-            </div> */}
           </div>
           
           <div className="text-left hidden md:block">
@@ -76,20 +67,10 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-bold mb-6">Реквизиты</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2 text-gray-400 text-sm">
-                <p className="font-semibold text-white">Получатель:</p>
                 <p>ИП КОНДРАТЧЕВ МИХАИЛ НИКОЛАЕВИЧ</p>
                 <p>ИНН: 772473751900</p>
                 <p>ОГРНИП: 318502700001322</p>
-                <p>Р/с: 40802 810 8 4000 0053949</p>
                 <p>Адрес: Автозаводская 23А корпус 2</p>
-              </div>
-              <div className="space-y-2 text-gray-400 text-sm">
-                <p className="font-semibold text-white">Банк получателя:</p>
-                <p>ПАО Сбербанк</p>
-                <p>БИК: 044525225</p>
-                <p>К/с: 30101 810 4 0000 0000225</p>
-                <p>ИНН: 7707083893</p>
-                <p>КПП: 773643002</p>
               </div>
             </div>
           </div>

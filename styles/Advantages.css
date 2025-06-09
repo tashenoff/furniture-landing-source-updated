@@ -3,17 +3,6 @@
   overflow: hidden !important;
 }
 
-.swiper-slide-advantages {
-  transition: all 0.3s ease;
-  opacity: 0.5;
-  transform: scale(0.9);
-}
-
-.swiper-slide-active.swiper-slide-advantages {
-  opacity: 1;
-  transform: scale(1);
-}
-
 .swiper-pagination {
   position: relative !important;
   margin-top: 40px;

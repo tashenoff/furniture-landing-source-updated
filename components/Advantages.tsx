@@ -54,7 +54,7 @@ const Advantages: React.FC = () => {
 
   return (
     <section id="advantages" className="pt-20 relative overflow-hidden">
-      <div className="mb-16 container mx-auto px-4">
+      <div className="mb-16 container mx-auto px-4 md:px-8">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4">
           Почему <span className="text-red-500">выбирают</span> нас
         </h2>
@@ -67,7 +67,7 @@ const Advantages: React.FC = () => {
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={0}
-          centeredSlides={true}
+          centeredSlides={false}
           loop={true}
           speed={800}
           autoplay={{
@@ -81,20 +81,16 @@ const Advantages: React.FC = () => {
           }}
           breakpoints={{
             320: {
-              slidesPerView: 1.5,
-              centeredSlides: true,
+              slidesPerView: 1,
             },
             640: {
-              slidesPerView: 2.5,
-              centeredSlides: true,
+              slidesPerView: 2,
             },
             1024: {
-              slidesPerView: 3.5,
-              centeredSlides: true,
+              slidesPerView: 3,
             },
             1280: {
-              slidesPerView: 4.5,
-              centeredSlides: true,
+              slidesPerView: 5,
             }
           }}
           className="advantages-swiper"

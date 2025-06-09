@@ -55,6 +55,11 @@ body {
   }
 }
 
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.95);}
+  to   { opacity: 1; transform: scale(1);}
+}
+
 .animate-title-reveal {
   animation: title-reveal 0.8s ease-out forwards;
 }
@@ -64,7 +69,11 @@ body {
 }
 
 .animate-fade-in {
-  animation: fade-in 1s ease-out forwards;
+  animation: fadeInScale 0.18s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+.animate-scale-in {
+  animation: fadeInScale 0.18s cubic-bezier(0.4,0,0.2,1) forwards;
 }
 
 /* Intersection Observer Animations */

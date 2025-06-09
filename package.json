@@ -31,6 +31,7 @@
     "swiper": "^11.2.7",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4",
+    "yet-another-react-lightbox": "^3.23.2",
     "zustand": "^5.0.5"
   },
   "scripts": {

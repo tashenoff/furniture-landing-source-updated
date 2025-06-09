@@ -5,6 +5,8 @@ import { useInView } from 'react-intersection-observer';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper/modules';
 import Image from 'next/image';
+import Lightbox from 'yet-another-react-lightbox';
+import "yet-another-react-lightbox/styles.css";
 
 // Import Swiper styles
 import 'swiper/css';
@@ -39,6 +41,8 @@ const Portfolio: React.FC = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   return (
     <section id="portfolio" className="py-20 bg-black">
@@ -103,7 +107,12 @@ const Portfolio: React.FC = () => {
               className={`group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ${inView ? 'is-visible' : ''}`}
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
-              <div className="relative aspect-[4/3] bg-gray-700 overflow-hidden">
+              <button
+                type="button"
+                className="relative aspect-[4/3] bg-gray-700 overflow-hidden w-full h-full focus:outline-none"
+                onClick={() => setLightboxIndex(index)}
+                aria-label="Открыть изображение в увеличенном виде"
+              >
                 <Image
                   src={item.image}
                   alt={`Проект ${index + 1}`}
@@ -111,10 +120,16 @@ const Portfolio: React.FC = () => {
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-              </div>
+              </button>
             </div>
           ))}
         </div>
+        <Lightbox
+          open={lightboxIndex !== null}
+          close={() => setLightboxIndex(null)}
+          slides={portfolioItems.map(item => ({ src: item.image }))}
+          index={lightboxIndex ?? 0}
+        />
       </div>
     </section>
   );

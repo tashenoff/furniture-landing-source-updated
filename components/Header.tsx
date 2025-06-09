@@ -49,17 +49,17 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
-              <Image src={logo} alt="Мебель Home" width={30} height={35} priority />
-              <span className="text-white text-base md:text-lg font-bold ml-2 md:ml-3">Мебель Home</span>
+              <Image src={logo} alt="Мебель Home" width={28} height={32} priority />
+              <span className="text-white text-sm lg:text-xs xl:text-sm font-bold ml-2 lg:ml-0.5 md:ml-2">Мебель Home</span>
             </div>
             
-            <nav className="hidden md:flex space-x-8">
-              <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="text-white hover:text-red-700 transition-colors">О компании</a>
-              <a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="text-white hover:text-red-700 transition-colors">Услуги</a>
-              <a href="#portfolio" onClick={(e) => handleNavClick(e, 'portfolio')} className="text-white hover:text-red-700 transition-colors">Портфолио</a>
-              <a href="#reviews" onClick={(e) => handleNavClick(e, 'reviews')} className="text-white hover:text-red-700 transition-colors">Отзывы</a>
-              <a href="#certificates" onClick={(e) => handleNavClick(e, 'certificates')} className="text-white hover:text-red-700 transition-colors">Гарантии</a>
-              <a href="#contacts" onClick={(e) => handleNavClick(e, 'contacts')} className="text-white hover:text-red-700 transition-colors">Контакты</a>
+            <nav className="hidden md:flex space-x-4 lg:space-x-3">
+              <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="text-white text-sm lg:text-xs xl:text-sm hover:text-red-700 transition-colors">О компании</a>
+              <a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="text-white text-sm lg:text-xs xl:text-sm hover:text-red-700 transition-colors">Услуги</a>
+              <a href="#portfolio" onClick={(e) => handleNavClick(e, 'portfolio')} className="text-white text-sm lg:text-xs xl:text-sm hover:text-red-700 transition-colors">Портфолио</a>
+              <a href="#reviews" onClick={(e) => handleNavClick(e, 'reviews')} className="text-white text-sm lg:text-xs xl:text-sm hover:text-red-700 transition-colors">Отзывы</a>
+              <a href="#certificates" onClick={(e) => handleNavClick(e, 'certificates')} className="text-white text-sm lg:text-xs xl:text-sm hover:text-red-700 transition-colors">Гарантии</a>
+              <a href="#contacts" onClick={(e) => handleNavClick(e, 'contacts')} className="text-white text-sm lg:text-xs xl:text-sm hover:text-red-700 transition-colors">Контакты</a>
             </nav>
             
             <div className="flex items-center space-x-6">
@@ -67,19 +67,19 @@ const Header: React.FC = () => {
                 <span className="text-green-500 mr-2 relative">
                   <FontAwesomeIcon icon={faCircle} className="text-xs animate-pulse" />
                 </span>
-                <span className="text-white text-sm">Сейчас работаем</span>
+                <span className="text-white text-xs lg:text-[10px] xl:text-xs">Сейчас работаем</span>
               </div>
               
               <a href="tel:+74993256717" className="flex items-center text-white hover:text-red-700 transition-colors">
                 <FontAwesomeIcon icon={faPhone} className="mr-2" />
-                <span className="hidden md:inline">+7 (499) 325-67-17</span>
+                <span className="hidden md:inline text-sm lg:text-xs xl:text-sm whitespace-nowrap">+7 (499) 325-67-17</span>
               </a>
               
               <button 
                 onClick={openModal}
-                className="hidden md:block bg-red-700 text-white px-4 py-2 rounded transition-colors relative overflow-hidden group"
+                className="hidden md:block bg-red-700 text-white px-3 py-1.5 lg:px-2 lg:py-1 rounded transition-colors relative overflow-hidden group"
               >
-                <span className="relative z-10">Заказать звонок</span>
+                <span className="relative z-10 text-sm lg:text-xs xl:text-sm">Заказать звонок</span>
                 <div 
                   className="absolute top-0 right-0 w-[80%] h-[300%] bg-gradient-to-r from-transparent via-white/10 to-transparent transform -rotate-45 group-hover:translate-x-[-150%] transition-transform duration-1000 ease-in-out"
                 />

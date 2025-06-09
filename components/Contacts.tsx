@@ -3,7 +3,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhone, faEnvelope, faClock } from '@fortawesome/free-solid-svg-icons';
-import { faWhatsapp, faTelegram } from '@fortawesome/free-brands-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { useInView } from 'react-intersection-observer';
 
 const Contacts: React.FC = () => {
@@ -15,7 +15,7 @@ const Contacts: React.FC = () => {
   return (
     <section id="contacts" className="lg:py-20 py-10 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="lg:text-4xl text-2xl font-bold text-left lg:mb-16 mb-8 text-center">Наши контакты</h2>
+        <h2 className="lg:text-4xl text-2xl font-bold lg:mb-16 mb-8 text-center">Наши контакты</h2>
         
         <div className="flex flex-col lg:flex-row gap-8">
           <div ref={ref} className="w-full lg:w-1/2 bg-white rounded-lg shadow-lg p-8">
@@ -77,7 +77,7 @@ const Contacts: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold mb-1 text-left">Время работы</h4>
-                    <p className="text-gray-600 text-left">Круглосуточно</p>
+                    <p className="text-gray-600 text-left">с 9:00 до 20:00</p>
                   </div>
                 </div>
                 
@@ -88,11 +88,8 @@ const Contacts: React.FC = () => {
                   <div>
                     <h4 className="font-bold mb-1 text-left">Мессенджеры</h4>
                     <div className="flex space-x-2">
-                      <a href="#" className="text-gray-600 hover:text-black transition-colors">
+                      <a href="https://wa.me/89891071959" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black transition-colors">
                         <FontAwesomeIcon icon={faWhatsapp} className="w-4 h-4" />
-                      </a>
-                      <a href="#" className="text-gray-600 hover:text-black transition-colors">
-                        <FontAwesomeIcon icon={faTelegram} className="w-4 h-4" />
                       </a>
                     </div>
                   </div>
