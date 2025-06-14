@@ -1,4 +1,4 @@
-// File: E:\furniture-landing-source-updated\app\layout.tsx
+// File: /mnt/e/furniture-landing-source-updated/app/layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
