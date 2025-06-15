@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'google-site-verification-code',
-    yandex: 'yandex-verification-code',
+    yandex: '9ceecba4803adfb1',
   },
   alternates: {
     canonical: 'https://mebel-home.ru',
