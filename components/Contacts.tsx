@@ -62,10 +62,10 @@ const Contacts: React.FC = () => {
                     <h4 className="font-bold mb-1 text-left">Email</h4>
                     <div className="flex items-center space-x-4">
                       <a
-                        href="mailto:miart-mebel@yandex.ru"
+                        href="mailto:mebelhome.pro@yandex.ru"
                         className="text-gray-600 hover:text-black transition-colors"
                       >
-                        miart-mebel@yandex.ru
+                        mebelhome.pro@yandex.ru
                       </a>
                     </div>
                   </div>
